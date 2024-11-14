@@ -15,11 +15,11 @@ set -e
 GKI_VERSION="android12-5.10"
 USE_LTS_MANIFEST=0
 USE_CUSTOM_MANIFEST=1
-CUSTOM_MANIFEST_REPO="https://github.com/negroweed/kernel_manifest_android12-5.10" # depends on USE_CUSTOM_MANIFEST
+CUSTOM_MANIFEST_REPO="https://github.com/ambatubash/kernel_manifest_android12-5.10" # depends on USE_CUSTOM_MANIFEST
 CUSTOM_MANIFEST_BRANCH="main"                                                      # depends on USE_CUSTOM_MANIFEST
 WORK_DIR=$(pwd)
 KERNEL_IMAGE="$WORK_DIR/out/${GKI_VERSION}/dist/Image"
-ANYKERNEL_REPO="https://github.com/negroweed/Anykernel3"
+ANYKERNEL_REPO="https://github.com/ambatubash/Anykernel3"
 ANYKERNEL_BRANCH="gki"
 RANDOM_HASH=$(head -c 20 /dev/urandom | sha1sum | head -c 7)
 ZIP_NAME="gki-KVER-KSU-$RANDOM_HASH.zip"
@@ -121,7 +121,7 @@ done
 cd $WORK_DIR
 
 text="
-*~~~ GKI KSU CI ~~~*
+*~~~ GKI CI by ambatubash ~~~*
 *GKI Version*: \`${GKI_VERSION}\`
 *Kernel Version*: \`${KERNEL_VERSION}\`
 *KSU Version*: \`${KSU_VERSION}\`
